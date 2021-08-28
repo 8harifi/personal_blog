@@ -121,7 +121,7 @@ USE_TZ = True
 
 # STATIC_URL = '/static/'
 # STATIC_URL = '~/home/mohammad/coding/python/django/personal_blog/static/'
-STATIC_URL = 'personal_blog/static/'
+STATIC_URL = 'static/'
 
 
 # Default primary key field type

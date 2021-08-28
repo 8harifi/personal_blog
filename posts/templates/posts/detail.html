@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>
-    {{post.title}}
-</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'posts/file1.css' %}">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>
+        {{post.title}}
+    </title>
+<meta charset="UTF-8">
 </head>
-<style>
+
+<!-- <style>
 body {
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
@@ -54,6 +60,41 @@ body {
 }
 
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
 .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
@@ -70,39 +111,6 @@ body {
     font-family: "Lato", sans-serif;
 }
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0px;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 20px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
 
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -114,15 +122,11 @@ body {
     padding: 0px;
 }
 
-</style>
+</style> -->
 <body>
 
-<div id="mySidenav" class="sidenav">
-  <a href="#">Home</a>
-  <a href="#">Posts</a>
-  <a href="#">Contact</a>
-  <a href="#">About</a>
-</div>
+
+{% include "posts/bars.html" %}
 
 <div id="main">
     <div class="topnav">
@@ -149,7 +153,7 @@ body {
     <p>author: {{post.author}}</p>
 
     <p>
-        {{post.content}}
+        {{post.content|safe }}
     </p>
 
     <p>
