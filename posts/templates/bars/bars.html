@@ -17,8 +17,13 @@
         <a href="/home" class="topnav" id="top_nav_home" style="float:right;width:12%;">
             home
         </a>
-        <a href="/search" class="topnav" id="top_nav_search" style="float:right;width:12%;">
+        <a href="#" class="topnav" id="top_nav_search" style="float:right;width:12%;" onclick="toggleSearchPopup();">
             search
         </a>
+        <div class="searchPopup" id="searchPopup">
+            <form action="/search/">
+                <input type="text" name="search" placeholder="search..">
+            </form>
+        </div>
     </div>
 </div>

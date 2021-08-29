@@ -2,13 +2,6 @@ function changeBar(x) {
     x.classList.toggle("change");
 };
 
-// function openSearch(x) {
-//     const searchIcon = document.querySelector("a#top_nav_search");
-//     const searchBar = document.createElement("form");
-//     searchBar.action = "/search/";
-//     searchBar.innerHTML = '<input type="text" placeholder="search..">';
-//     searchIcon.parentNode.replaceChild(searchBar, searchIcon);
-// };
 
 
 function toggleNav() {
@@ -25,6 +18,27 @@ function topNavItemActivator() {
         document.getElementById("top_nav_search").classList = "topnav active";
     };
 };
+
+
+// function openSearchPopup() {
+//     document.getElementById("searchPopup").style.display = "block";
+// };
+  
+//   function closeSearchPopup() {
+//     document.getElementById("searchPopup").style.display = "none";
+// };
+
+function toggleSearchPopup() {
+    var searchPopup = document.getElementById("searchPopup");
+    if (searchPopup.style.display == "none") {
+        searchPopup.style.display = "block";
+    } else if (searchPopup.style.display == "block") {
+        searchPopup.style.display = "none";
+    }else {
+        searchPopup.style.display = "none";
+    };
+};
+
 
 window.onload = function(){
     topNavItemActivator();
