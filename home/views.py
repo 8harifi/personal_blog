@@ -1,4 +1,5 @@
-from django.shortcuts import render
+# from django.http.response import HttpResponseRedirect
+from django.shortcuts import render, redirect
 
 def home (request):
     return render(request, "home/home.html")
@@ -11,3 +12,6 @@ def search (request):
 
 def about (request):
     return render(request, "home/about.html")
+
+def home_redirect (request):
+    return redirect("/")

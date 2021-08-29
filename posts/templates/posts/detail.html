@@ -2,9 +2,10 @@
 <html>
 <head>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'posts/file1.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'posts/detail.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'bars/bars.css' %}">
+    <script src="{% static 'bars/bars.js' %}"></script>
 
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <title>
         {{post.title}}
     </title>
@@ -14,25 +15,8 @@
 <body>
 
 
-{% include "posts/bars.html" %}
-
 <div id="main">
-    <div class="topnav">
-        <a class="container" onclick="myFunction(this);toggleNav()">
-            <div class="container">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
-        <div>
-            <a href="/home" class="topnav active" style="float:right;width:12%;">
-                home
-            </a>
-            <a id="open_search" href="#" class="topnav" style="float:right;width:12%;" onclick="openSearch(this)">
-                search
-            </a>
-        </div>
-    </div>
+    {% include "bars/bars.html" %}
 
     <h1>
         {{post.title}}
@@ -50,23 +34,7 @@
 </div>
 
 </body>
-<script>
-function myFunction(x) {
-  x.classList.toggle("change");
-}
 
-function openSearch(x) {
-    x.style="float:right;width:35%;";
-}
-
-
-function toggleNav() {
-    var sidenav = document.getElementById("mySidenav"),
-    main = document.getElementById("main");
-    sidenav.style.width = sidenav.style.width === "250px" ? '0' : '250px';
-    main.style.marginLeft = main.style.marginLeft === "250px" ? '0' :  '250px';
-}
-</script>
 
 
 </html> 

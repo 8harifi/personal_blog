@@ -1,5 +1,19 @@
-<h1>
-    this is the home page
-</h1>
-<a href="/posts">posts</a>
-<a href="admin"></a>
+<html>
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'bars/bars.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/home.css' %}">
+    <script src="{% static 'bars/bars.js' %}"></script>
+</head>
+
+<body>
+
+    <div id="main">
+        {% include "bars/bars.html" %}
+        <a href="/posts">posts</a>
+        <a href="admin">admin</a>
+    </div>
+
+
+</body>
+</html>

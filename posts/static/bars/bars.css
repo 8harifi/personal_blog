@@ -19,9 +19,9 @@
   background-color: #333;
 }
 
-/* .topnav a.active {
+.active {
   background-color: #008ae6;
-} */
+}
 
 .topnav .active {
   color: white;
@@ -88,8 +88,14 @@ margin-left: 50px;
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
-body {
-  font-family: "Lato", sans-serif;
+
+.topnav input[type=text] {
+  float: right;
+  padding: 12px;
+  border: none;
+  margin-top: 15px;
+  margin-right: 16px;
+  font-size: 17px;
 }
 
 
