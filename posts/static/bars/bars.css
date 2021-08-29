@@ -61,6 +61,20 @@ color: #f1f1f1;
 }
 
 
+
+/* search bar in navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 15px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+/* ^ ^ search bar in navigation bar ^ ^ */
+
+
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -100,8 +114,10 @@ color: #f1f1f1;
   display: none;
   position: fixed;
   float: top;
+  background-color: #008ae6;
   top: 100px;
-  right: 15px;
-  border: 3px solid #f1f1f1;
+  right: 1200px;
+  border: 20px solid #2f60af;
   z-index: 9;
 }
+
